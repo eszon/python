@@ -5,4 +5,4 @@ print('Olá Mundo!')
 
 #Usando variável
 msg = 'Olá Mundo!'
-print(msg)
+print('{}{}{}'.format('\033[1;32m', msg, '\033[m'))
