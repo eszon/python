@@ -13,7 +13,7 @@ cursor = conn.cursor()
 cursor.execute(""" CREATE TABLE clientes (
                     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
                     nome TEXT NOT NULL,
-                    email,
+                    email TEXT NOT NULL,
                     criado_em DATE NOT NULL); """)
 
 print('Tabela criada com sucesso!')
