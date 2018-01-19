@@ -1,6 +1,5 @@
-# Import hello module
-import hello
+# Import function module
+import functions
 
 
-# Call function
-hello.world()
+functions.create_db('teste')
