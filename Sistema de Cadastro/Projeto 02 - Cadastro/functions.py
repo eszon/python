@@ -20,7 +20,7 @@ def create_schema(param1):
 
     # criando a tabela (schema)
 
-    cursor.execute(""" CREATE TABLE clientes (
+    cursor.execute(""" CREATE TABLE IF NOT EXISTS clientes (
                         id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
                         nome TEXT NOT NULL,
                         email TEXT NOT NULL,
@@ -33,14 +33,15 @@ def create_schema(param1):
 
 def create_data(param1):
     import sqlite3
+    from time import strftime
 
     conn = sqlite3.connect(param1)
     cursor = conn.cursor()
 
     # solitando dados ao usuario
-    p_nome = input('Nome: ')
-    p_email = input('Email: ')
-    p_criado_em = input('Criado em (dd-mm-yyyy): ')
+    p_nome = input('Digite o nome: ')
+    p_email = input('Digite o email: ')
+    p_criado_em = strftime("%a, %d %b %Y %H:%M:%S")
 
     # inserindo dados na tabela
     cursor.execute(""" INSERT INTO clientes (nome, email, criado_em) VALUES (?, ?, ?)
