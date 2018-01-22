@@ -37,4 +37,4 @@ elif f == 4:
     print('Sua compra de R${:.2f} vai custar R${:.2f} com JUROS no final.'.format(valor, j))
 
 else:
-    print('Opção invalida. Por favor, tente novamente.')
+    print('{}Opção invalida. Por favor, tente novamente.{}'.format('\033[1;31m', '\033[m'))
