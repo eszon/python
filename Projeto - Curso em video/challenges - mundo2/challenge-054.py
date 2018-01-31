@@ -1,9 +1,10 @@
 #!/usr/bin/env python
+from datetime import date
 
 # variaveis
 contador_maior = 0
 contador_menor = 0
-ano_atual = 2018
+ano_atual = date.today().year
 
 # logica
 for i in range(1, 5):
