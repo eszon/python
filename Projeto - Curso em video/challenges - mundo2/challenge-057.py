@@ -5,7 +5,7 @@ sexo = ''
 
 # logica
 while sexo != 0:
-    sexo = str(input('Sexo (M/F): '))
+    sexo = str(input('Sexo (M/F): ')).strip()
 
     if sexo in 'MmFf':
         break
