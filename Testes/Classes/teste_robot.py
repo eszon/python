@@ -1,12 +1,10 @@
-from robot import robot
+from robot import Robot
 
-c = robot()
-
-c.walk()
+c = Robot()
 
 c.walk()
 
+c.recharge()
+
 c.walk()
 
-
-#c.stop()
