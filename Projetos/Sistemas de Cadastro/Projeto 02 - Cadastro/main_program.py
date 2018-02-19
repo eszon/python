@@ -5,10 +5,10 @@ functions.create_schema('teste')
 
 while True:
 
-    o = int(input('\n 1 - Criar um novo cadastro '
-                  '\n 2 - Atualizar um cadastro existente '
-                  '\n 3 - Deletar um cadastro '
-                  '\n 4 - Visualizar todos os cadastrados'
+    o = int(input('\n [1] - Criar um novo cadastro '
+                  '\n [2] - Atualizar um cadastro existente '
+                  '\n [3] - Deletar um cadastro '
+                  '\n [4] - Visualizar todos os cadastrados'
                   '\n Opção:  '))
 
     if o == 1:

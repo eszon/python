@@ -1,7 +1,4 @@
 # Define a function
-def world():
-    print("Hello, World!")
-
 
 def create_db(param1):
     import sqlite3

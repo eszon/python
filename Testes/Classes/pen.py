@@ -4,14 +4,14 @@ class Pen(object):
         self.model = 'BAND'
 
 
-    @property
-    def getModel(self):
-        return self.__model
 
-    @getModel.setter
-    def getModel(self, m):
-        self.__getModel = m
-        print(self.__getModel)
+    def getModel01(self):
+        print(f'Public Method: {self.model}')
+
+
+    def __getModel02(self, m):
+        print(f'Private Method: {self.model}')
+
 
 
 
