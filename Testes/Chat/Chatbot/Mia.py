@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 from chatterbot.trainers import ListTrainer
-from chatterbot import ChatBot
+from chatterbot import ChatBot, chatterbot
 import os
 from datetime import datetime
 
 
-def fhour():
+def fhour(): # Return time.
     now = datetime.now()
-    print(f'{now.day}/{now.month}/{now.year} {now.hour}:{now.minute}:{now.second}')
+    print(f'São {now.hour}:{now.minute}:{now.second}.')
+    #{now.day} / {now.month} / {now.year}
 
-
-chatbot = ChatBot("Mia")
+chatbot = ChatBot("Mia") # Name of bot
 chatbot.set_trainer(ListTrainer)
 
 path = "C:/Users/igor.vieira/Documents/Documentos/Github/python/Testes/Chat/Chatbot/knowledge/"
@@ -25,8 +25,8 @@ while True:
      request = input('You: ')
 
      response = chatbot.get_response(request)
-     if response == 'RESPONDE_HORA':
-         print('9Mia: ', end=' ')
+     if response == '':
+         print('9Mia:', end=' ')
          fhour()
      else:
         print('Mia: ', response, )

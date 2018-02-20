@@ -6,4 +6,7 @@ def fhour():
     t = strftime("%a, %d %b %Y %H:%M:%S -0003", gmtime())
     print(t)
 
-fhour()
+s = 'function hora'
+print(s.split(' ')[1])
+
+print(fhour())
