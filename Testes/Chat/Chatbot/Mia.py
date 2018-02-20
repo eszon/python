@@ -10,6 +10,13 @@ def fhour(): # Return time.
     print(f'São {now.hour}:{now.minute}:{now.second}.')
     #{now.day} / {now.month} / {now.year}
 
+def fslice(param1):
+    s = param1.split(' ')[1]
+    print(s + f'{()}')
+
+def helloworld():
+    print('Fucking Hello World!')
+
 chatbot = ChatBot("Mia") # Name of bot
 chatbot.set_trainer(ListTrainer)
 
@@ -21,16 +28,21 @@ for file in os.listdir(path):
     chatbot.train(chats)
 
 while True:
-    try:
+   # try:
      request = input('You: ')
 
      response = chatbot.get_response(request)
-     if response == '':
-         print('9Mia:', end=' ')
-         fhour()
+
+     response2 = response.split(' ')
+
+'''
+    if response2 == 'function':
+        print('9Mia:', end=' ')
+        fslice(response)
+
      else:
         print('Mia: ', response, )
+'''
 
-
-    except(KeyboardInterrupt, EOFError, SystemExit):
-        break
+    #except(KeyboardInterrupt, EOFError, SystemExit):
+     #   break
