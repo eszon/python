@@ -2,27 +2,30 @@ from datetime import datetime
 
 class PreProcessed(object):
 
-    def ftime(self):
+    def call_time(self):
         now = datetime.now()
         print(f'{now.hour}:{now.minute}:{now.second} ', end='')
         ##{now.day} / {now.month} / {now.year}
 
-    def fslice(self, param1):
+    def call_funcexec(self, param1):
         s = param1.split(' ')[1]
-        print(s)
         exec(f'self.{s}' + f'{()}')
 
 
-    def logicfuc(self, param2):
-        #cpp = PreProcessed
-        response2 = param2.split(' ')[0]
-        if response2 == 'function':
-            print('9Mia:', end=' ')
-            self.fslice(param2)
+    def call_logic(self, param2):
+        #response2 = param2.split(' ')[0]
+        if param2.startswith("function"):   # startswitch verifica se começa com 'string'
+        #if response2 == 'function':
+            print(f'{self.call_time():} Mia:', end=' ')
+            self.call_funcexec(param2)
 
         else:
-           print(f'{self.ftime()} Mia: ', param2, )
+           print(f'{self.call_time()} Mia: ', param2, )
 
+
+
+
+#Teste
     def helloworld(self):
         print('Fucking Hello World!')
 

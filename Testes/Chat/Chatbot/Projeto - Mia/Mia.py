@@ -1,7 +1,6 @@
 from chatterbot.trainers import ListTrainer
 from chatterbot import ChatBot, chatterbot
 import os
-from datetime import datetime
 from class_preprocess import PreProcessed
 
 #log = logging.basicConfig(level=logging.INFO)
@@ -18,14 +17,13 @@ for file in os.listdir(path):
 
 while True:
     try:
-     request = input(f'{cpp.ftime()} You: ', )
+     request = input(f'{cpp.call_time()} You: ', )
 
      response = chatbot.get_response(request)
-     response1 = response.text
 
-     cpp.logicfuc(response1)
+     cpp.call_logic(response.text)
 
-     #print(f'{fhour()} Mia: ', response, )
+
 
     except(KeyboardInterrupt, EOFError, SystemExit):
         break

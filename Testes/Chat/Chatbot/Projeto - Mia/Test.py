@@ -2,8 +2,12 @@ from datetime import date
 from time import gmtime, strftime
 from datetime import datetime
 import Class_PreProcess
+import ssh
 
+server = ssh.Connection(host='172.16.0.39', username='confere', password='cf1234')
+result = server.execute('ping 172.16.0.17')
 
+'''
 def fslice(param1):
     s = param1.split(' ')[1]
     exec(s + f'{()}')
@@ -16,9 +20,8 @@ def fhour():
 def helloworld():
     print('Fucking hello word.')
 
-'''s = 'function hora'
+s = 'function hora'
 print(s.split(' ')[1])
-'''
 
 response = 'function helloworld'
 
@@ -44,3 +47,5 @@ def logicfuc(self, param1):
         print(f'{ftime()}Mia: ', param1, )
 
 logicfuc(response="function hello")
+
+'''
