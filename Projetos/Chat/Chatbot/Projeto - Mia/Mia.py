@@ -8,7 +8,7 @@ cpp = PreProcessed()
 chatbot = ChatBot("Mia") # Name of bot
 chatbot.set_trainer(ListTrainer)
 
-path = "C:/Users/igor.vieira/Documents/Documentos/Github/python/Testes/Chat/Chatbot/knowledge/"
+path = "C:/Users/igor.vieira/Documents/Documentos/Github/python/Projetos/Chat/Chatbot/knowledge/"
 dir = os.listdir(path)
 
 for file in os.listdir(path):

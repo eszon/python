@@ -5,6 +5,7 @@ class PreProcessed(object):
     def call_time(self):
         now = datetime.now()
         print(f'{now.hour}:{now.minute}:{now.second} ', end='')
+        return 0
         ##{now.day} / {now.month} / {now.year}
 
     def call_funcexec(self, param1):
