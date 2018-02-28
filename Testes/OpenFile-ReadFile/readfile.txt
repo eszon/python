@@ -1,6 +1,0 @@
-My name is Igor and i have 29 years old
-Im from Maceio Brazil and i'm a Network Administration
-This file contains a three lines.
-My name is Igor and i have 29 years old
-Im from Maceio Brazil and i'm a Network Administration
-This file contains a three lines.
